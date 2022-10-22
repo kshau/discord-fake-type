@@ -1,6 +1,9 @@
 const { fetch } = require("undici");
+const DotEnv = require("dotenv");
 
-const TOKEN = "NzY4MTgxMjc3ODE0Njg1NzA2.GNiFRJ._nNwuiuQAgBl6jeGBok4_TGmxKxdHvgz9hZ6eE";
+DotEnv.config();
+
+const TOKEN = process.env.TOKEN;
 const CHANNEL_ID = "883531056660221955";
 
 async function visualTyping(token, channelId) {
